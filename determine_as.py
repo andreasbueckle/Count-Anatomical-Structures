@@ -42,5 +42,7 @@ print("Total #AS: " + str(sum))
 print("Counts: " + str(len(flattened_list)))
 print("Total #AS is equal to counts: " + str(sum == len(flattened_list)))
 
+# get #unique AS
+print("Unique AS: " + str(len(dict.keys())))
 
 
