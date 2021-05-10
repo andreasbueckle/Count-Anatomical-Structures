@@ -1,9 +1,11 @@
 import json
 from os import listdir
 
-# download all JSON files into same directory as this py file
+# download all JSON files into a directory called "json"
+all_filenames = listdir("json")
+print(all_filenames)
+
 # get file names from directroy
-all_filenames = listdir()
 json_filenames = []
 for i in all_filenames:
     if "json" in i:
@@ -12,7 +14,7 @@ for i in all_filenames:
 # created nested list of cc_annotations
 anatom_struct = []
 for j in json_filenames:
-    with open(j, "r") as current_file:
+    with open("json/" + j, "r") as current_file:
         data = json.load(current_file)
         anatom_struct.append(data["ccf_annotations"])
 
